@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-!6nl4x@^7go++ta79q3it!x@cgfpc_pt0wyncf-=hznnhhv5%j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.84.54.116', 'localhost']
 
 
 # Application definition
@@ -79,11 +79,17 @@ DATABASES = {
     "default": {
         #"ENGINE": "django.db.backends.sqlite3",
         #"NAME": BASE_DIR / "db.sqlite3",
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'travelAgency',
+       # 'ENGINE': 'django.db.backends.mysql',
+       # 'NAME': 'travelAgency',
+       # 'USER': 'root',
+       # 'HOST': 'localhost',
+       # 'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'travelapp',
         'USER': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'PASSWORD': 'root',
+        'HOST': 'your-rds-endpoint',
+        'PORT': '5432',
 
     }
 }
